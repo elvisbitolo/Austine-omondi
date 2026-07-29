@@ -22,6 +22,19 @@
   margin: 0 auto;
 }
 
+.heroBadge {
+  margin-bottom: 20px;
+}
+
+.heroLogo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--color-secondary);
+  object-fit: cover;
+  margin: 0 auto;
+}
+
 .heroPrefix {
   font-size: 1rem;
   color: var(--color-secondary-light);

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Countdown from "./_components/Countdown";
 import AnimateOnScroll from "./_components/AnimateOnScroll";
@@ -10,6 +11,16 @@ export default function Home() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
+          <div className={styles.heroBadge}>
+            <Image
+              src="/logo.jpg"
+              alt={SITE.fullName}
+              width={96}
+              height={96}
+              className={styles.heroLogo}
+              priority
+            />
+          </div>
           <p className={styles.heroPrefix}>Your Choice for Progress</p>
           <h1 className={styles.heroTitle}>
             {SITE.fullName}
