@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SITE, NAV_LINKS } from "../_lib/constants";
@@ -14,8 +15,17 @@ export default function Nav() {
     <nav className={styles.nav}>
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.logo}>
-          <span className={styles.logoName}>{SITE.name}</span>
-          <span className={styles.logoTagline}>{SITE.tagline}</span>
+          <Image
+            src="/logo.jpg"
+            alt={SITE.name}
+            width={36}
+            height={36}
+            className={styles.navLogo}
+          />
+          <div>
+            <span className={styles.logoName}>{SITE.name}</span>
+            <span className={styles.logoTagline}>{SITE.tagline}</span>
+          </div>
         </Link>
 
         <button
