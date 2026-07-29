@@ -128,7 +128,8 @@ ol {
 
 .btn-primary:hover {
   background: #b8851a;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 149, 30, 0.4);
 }
 
 .btn-outline {

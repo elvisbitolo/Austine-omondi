@@ -9,7 +9,11 @@ export default function Home() {
   return (
     <>
       <section className={styles.hero}>
+        <div className={styles.heroBg} />
         <div className={styles.heroOverlay} />
+        <div className={`${styles.heroShape} ${styles.heroShape1}`} />
+        <div className={`${styles.heroShape} ${styles.heroShape2}`} />
+        <div className={`${styles.heroShape} ${styles.heroShape3}`} />
         <div className={`container ${styles.heroContent}`}>
           <div className={styles.heroBadge}>
             <Image
