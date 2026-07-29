@@ -1,0 +1,86 @@
+.intro {
+  background: var(--color-bg-alt);
+}
+
+.contact {
+  background: var(--color-bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.infoTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 32px;
+}
+
+.infoItem {
+  margin-bottom: 24px;
+}
+
+.infoLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.infoValue {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-bottom: 4px;
+  transition: color 0.2s;
+}
+
+a.infoValue:hover {
+  color: var(--color-primary);
+}
+
+.socialLinks {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  padding: 8px 20px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.socialLink:hover {
+  background: var(--color-primary-light);
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.formDesc {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

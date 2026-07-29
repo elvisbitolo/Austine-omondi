@@ -1,66 +1,108 @@
-import Image from "next/image";
+import Link from "next/link";
+import { SITE, ACHIEVEMENTS } from "./_lib/constants";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <section className={styles.hero}>
+        <div className={styles.heroOverlay} />
+        <div className={`container ${styles.heroContent}`}>
+          <p className={styles.heroPrefix}>Your Choice for Progress</p>
+          <h1 className={styles.heroTitle}>
+            {SITE.fullName}
+            <span className={styles.heroTagline}>{SITE.tagline}</span>
+          </h1>
+          <p className={styles.heroDesc}>
+            Dedicated to serving the people of Karura Ward with integrity,
+            transparency, and transformative leadership.
           </p>
+          <div className={styles.heroActions}>
+            <Link href="/manifesto" className="btn btn-primary">
+              Read My Manifesto
+            </Link>
+            <Link href="/contact" className="btn btn-outline">
+              Join the Movement
+            </Link>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className={`section ${styles.about}`}>
+        <div className="container">
+          <h2 className="section-title">Who I Am</h2>
+          <p className="section-subtitle">
+            A man of the people, driven by purpose and a vision for a better
+            Karura.
+          </p>
+          <div className={styles.aboutGrid}>
+            <div className={styles.aboutCard}>
+              <h3>Background</h3>
+              <p>
+                Born in 1996 in Kojwach Ward, Kabondo Kasipul, Homabay County.
+                My journey from Homabay to Karura has been shaped by a deep
+                commitment to education, community service, and leadership.
+              </p>
+            </div>
+            <div className={styles.aboutCard}>
+              <h3>Education</h3>
+              <p>
+                BA in Peace Studies &amp; Conflict Resolution (Mount Kenya
+                University), Diploma in Counseling Psychology (Serein College),
+                and training in education management.
+              </p>
+            </div>
+            <div className={styles.aboutCard}>
+              <h3>Mission</h3>
+              <p>
+                To bring progressive leadership, quality education support,
+                environmental sustainability, and youth empowerment to every
+                corner of Karura Ward.
+              </p>
+            </div>
+          </div>
+          <div className={styles.aboutAction}>
+            <Link href="/about" className="btn btn-primary">
+              Learn More About Me
+            </Link>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className={`section ${styles.achievements}`}>
+        <div className="container">
+          <h2 className="section-title">Achievements &amp; Roles</h2>
+          <p className="section-subtitle">
+            A track record of service and leadership.
+          </p>
+          <div className={styles.achievementsGrid}>
+            {ACHIEVEMENTS.map((item) => (
+              <div key={item.title} className={styles.achievementCard}>
+                <h3 className={styles.achievementTitle}>{item.title}</h3>
+                <p className={styles.achievementDesc}>{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={`section ${styles.cta}`}>
+        <div className="container">
+          <h2 className={styles.ctaTitle}>Together We Can Build a Better Karura</h2>
+          <p className={styles.ctaDesc}>
+            Your voice matters. Join the movement for change, progress, and
+            transformative leadership in Karura Ward.
+          </p>
+          <div className={styles.ctaActions}>
+            <Link href="/contact" className="btn btn-primary">
+              Volunteer With Us
+            </Link>
+            <Link href="/events" className="btn btn-outline">
+              Upcoming Events
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

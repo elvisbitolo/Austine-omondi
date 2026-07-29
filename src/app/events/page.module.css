@@ -1,0 +1,104 @@
+.intro {
+  background: var(--color-bg-alt);
+}
+
+.eventsList {
+  background: var(--color-bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.cardDate {
+  background: var(--color-primary);
+  padding: 16px;
+  text-align: center;
+}
+
+.dateLabel {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.cardBody {
+  padding: 24px;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.cardLocation {
+  font-size: 0.85rem;
+  color: var(--color-secondary);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.emptyTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.emptyDesc {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+}
+
+.contactPrompt {
+  text-align: center;
+  margin-top: 48px;
+  padding: 24px;
+  background: var(--color-accent);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+}
+
+.emailLink {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.emailLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

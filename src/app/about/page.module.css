@@ -1,0 +1,169 @@
+.intro {
+  background: var(--color-bg-alt);
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.introContent p {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.introHeading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.quickInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 20px;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.quickInfo li {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.quickInfo strong {
+  color: var(--color-text);
+  min-width: 120px;
+  display: inline-block;
+}
+
+.photoPlaceholder {
+  display: flex;
+  justify-content: center;
+}
+
+.photoBox {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 3 / 4;
+  background: var(--color-accent);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--color-border);
+}
+
+.photoBox span {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.education {
+  background: var(--color-bg);
+}
+
+.eduList {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.eduCard {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 24px;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.eduDot {
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  margin-top: 4px;
+}
+
+.eduDegree {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.eduDetails {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.achievements {
+  background: var(--color-bg-alt);
+}
+
+.achievementsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.achievementCard {
+  background: var(--color-white);
+  padding: 28px 20px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  border: 1px solid var(--color-border);
+  transition: transform 0.2s;
+}
+
+.achievementCard:hover {
+  transform: translateY(-3px);
+}
+
+.achievementTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.achievementDesc {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .introGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .photoBox {
+    max-width: 260px;
+  }
+
+  .achievementsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .achievementsGrid {
+    grid-template-columns: 1fr;
+  }
+}

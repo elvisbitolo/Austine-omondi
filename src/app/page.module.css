@@ -1,142 +1,199 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
+.hero {
+  position: relative;
+  min-height: 85vh;
   display: flex;
-  flex: 1;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0d4a33 50%, #1a6b3c 100%);
+  overflow: hidden;
 }
 
-.main {
-  display: flex;
-  flex: 1;
-  width: 100%;
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
   max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+  margin: 0 auto;
 }
 
-.intro {
+.heroPrefix {
+  font-size: 1rem;
+  color: var(--color-secondary-light);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.heroTagline {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-secondary);
+  margin-top: 8px;
+}
+
+.heroDesc {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 560px;
+  margin: 20px auto 36px;
+  line-height: 1.7;
+}
+
+.heroActions {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about {
+  background: var(--color-bg-alt);
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
+.aboutCard {
+  background: var(--color-white);
+  padding: 32px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
+.aboutCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
+.aboutCard h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 12px;
 }
 
-.ctas {
+.aboutCard p {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+.aboutAction {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.achievements {
+  background: var(--color-bg);
+}
+
+.achievementsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.achievementCard {
+  background: var(--color-bg-alt);
+  padding: 28px 20px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  border: 1px solid var(--color-border);
+  transition: transform 0.2s;
+}
+
+.achievementCard:hover {
+  transform: translateY(-3px);
+}
+
+.achievementTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.achievementDesc {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
+.cta {
+  background: var(--color-primary);
+  text-align: center;
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.ctaDesc {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 500px;
+  margin: 0 auto 32px;
+}
+
+.ctaActions {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
   gap: 16px;
-  font-size: 14px;
-}
-
-.ctas a {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
+  flex-wrap: wrap;
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--button-secondary-border);
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.2rem;
   }
 
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
+  .heroTagline {
+    font-size: 1.1rem;
+  }
+
+  .heroDesc {
+    font-size: 1rem;
+  }
+
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievementsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ctaTitle {
+    font-size: 1.5rem;
   }
 }
 
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-
-  .page {
-    --background: #000;
-    --foreground: #000;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
+@media (max-width: 480px) {
+  .achievementsGrid {
+    grid-template-columns: 1fr;
   }
 }
