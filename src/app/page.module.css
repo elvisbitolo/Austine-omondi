@@ -77,12 +77,6 @@
 
 .heroBadge {
   margin-bottom: 20px;
-  animation: fadeInDown 0.8s ease forwards;
-}
-
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 .heroLogo {
@@ -101,8 +95,6 @@
   letter-spacing: 3px;
   font-weight: 600;
   margin-bottom: 16px;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease 0.2s forwards;
 }
 
 .heroTitle {
@@ -111,8 +103,6 @@
   color: var(--color-white);
   line-height: 1.1;
   margin-bottom: 8px;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease 0.35s forwards;
 }
 
 .heroTagline {
@@ -129,15 +119,11 @@
   max-width: 560px;
   margin: 20px auto 36px;
   line-height: 1.7;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease 0.5s forwards;
 }
 
 .countdownWrap {
   margin: 28px 0 32px;
   text-align: center;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease 0.65s forwards;
 }
 
 .countdownLabel {
@@ -154,8 +140,6 @@
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease 0.8s forwards;
 }
 
 .about {
