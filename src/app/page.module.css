@@ -55,6 +55,20 @@
   line-height: 1.7;
 }
 
+.countdownWrap {
+  margin: 28px 0 32px;
+  text-align: center;
+}
+
+.countdownLabel {
+  font-size: 0.85rem;
+  color: var(--color-secondary-light);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
 .heroActions {
   display: flex;
   gap: 16px;

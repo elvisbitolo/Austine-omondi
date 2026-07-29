@@ -1,3 +1,4 @@
+import AnimateOnScroll from "../_components/AnimateOnScroll";
 import { SITE } from "../_lib/constants";
 import styles from "./page.module.css";
 
@@ -77,8 +78,7 @@ export default function Manifesto() {
         <div className="container">
           <h1 className="section-title">My Manifesto</h1>
           <p className="section-subtitle">
-            A bold vision for a prosperous, inclusive, and sustainable Karura
-            Ward.
+            A bold vision for a prosperous, inclusive, and sustainable Karura Ward.
           </p>
           <div className={styles.introText}>
             <p>
@@ -98,43 +98,47 @@ export default function Manifesto() {
       <section className={`section ${styles.pillars}`}>
         <div className="container">
           <div className={styles.pillarsGrid}>
-            {PILLARS.map((pillar) => (
-              <div key={pillar.title} className={styles.pillarCard}>
-                <div className={styles.pillarIcon}>{pillar.icon}</div>
-                <h3 className={styles.pillarTitle}>{pillar.title}</h3>
-                <ul className={styles.pillarPoints}>
-                  {pillar.points.map((point, i) => (
-                    <li key={i} className={styles.pillarPoint}>
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {PILLARS.map((pillar, i) => (
+              <AnimateOnScroll key={pillar.title} className="anim-visible-scale">
+                <div className={styles.pillarCard} style={{ animationDelay: `${i * 0.1}s` }}>
+                  <div className={styles.pillarIcon}>{pillar.icon}</div>
+                  <h3 className={styles.pillarTitle}>{pillar.title}</h3>
+                  <ul className={styles.pillarPoints}>
+                    {pillar.points.map((point, j) => (
+                      <li key={j} className={styles.pillarPoint}>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>
       </section>
 
-      <section className={`section ${styles.cta}`}>
-        <div className="container">
-          <h2 className={styles.ctaTitle}>
-            This is Our Moment
-          </h2>
-          <p className={styles.ctaDesc}>
-            These promises are not just words — they are a contract with the
-            people of Karura Ward. With your support, we will turn them into
-            reality.
-          </p>
-          <div className={styles.ctaActions}>
-            <a href={`tel:${SITE.phone[0]}`} className="btn btn-primary">
-              Call {SITE.phone[0]}
-            </a>
-            <a href={`mailto:${SITE.email}`} className="btn btn-outline">
-              Email Me
-            </a>
+      <AnimateOnScroll>
+        <section className={`section ${styles.cta}`}>
+          <div className="container">
+            <h2 className={styles.ctaTitle}>
+              This is Our Moment
+            </h2>
+            <p className={styles.ctaDesc}>
+              These promises are not just words — they are a contract with the
+              people of Karura Ward. With your support, we will turn them into
+              reality.
+            </p>
+            <div className={styles.ctaActions}>
+              <a href={`tel:${SITE.phone[0]}`} className="btn btn-primary">
+                Call {SITE.phone[0]}
+              </a>
+              <a href={`mailto:${SITE.email}`} className="btn btn-outline">
+                Email Me
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </AnimateOnScroll>
     </>
   );
 }
