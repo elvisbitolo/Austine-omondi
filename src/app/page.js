@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <>
       <section className={styles.hero}>
+        <div className={styles.heroBg} />
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <p className={styles.heroPrefix}>Your Choice for Progress</p>

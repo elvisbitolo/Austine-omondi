@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SITE, EDUCATION, ACHIEVEMENTS } from "../_lib/constants";
 import styles from "./page.module.css";
 
@@ -42,7 +43,13 @@ export default function About() {
             </div>
             <div className={styles.photoPlaceholder}>
               <div className={styles.photoBox}>
-                <span>Photo Coming Soon</span>
+                <Image
+                  src="/hero-thumb.jpg"
+                  alt={SITE.fullName}
+                  width={96}
+                  height={96}
+                  className={styles.photo}
+                />
               </div>
             </div>
           </div>

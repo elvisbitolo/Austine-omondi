@@ -52,20 +52,16 @@
 
 .photoBox {
   width: 100%;
-  max-width: 360px;
-  aspect-ratio: 3 / 4;
-  background: var(--color-accent);
+  max-width: 280px;
   border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px dashed var(--color-border);
+  overflow: hidden;
+  border: 3px solid var(--color-secondary);
 }
 
-.photoBox span {
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
-  font-weight: 500;
+.photo {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .education {
