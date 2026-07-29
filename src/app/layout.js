@@ -17,6 +17,9 @@ export const metadata = {
   title: "Austine Omondi | MCA Aspirant Karura Ward 2027",
   description:
     "Official campaign website of Austine Omondi — MCA aspirant for Karura Ward 2027. Educator, youth leader, environmentalist, and philanthropist committed to transformative leadership.",
+  verification: {
+    google: "EO1A_95MmyPuFD2ULeSrZ2xzliMUJEdAWtRmclDUwPo",
+  },
   openGraph: {
     title: "Austine Omondi | MCA Aspirant Karura Ward 2027",
     description:
