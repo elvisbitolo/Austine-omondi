@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SITE } from "../_lib/constants";
 import styles from "./page.module.css";
 
@@ -7,27 +8,20 @@ export const metadata = {
     "Upcoming campaign events, rallies, and community meetings for Austine Omondi's MCA campaign in Karura Ward.",
 };
 
+const ID_IMAGES = [
+  "/gallery/id-registration-drive-1.jpg",
+  "/gallery/id-registration-drive-2.jpg",
+  "/gallery/id-registration-drive-3.jpg",
+];
+
 const UPCOMING_EVENTS = [
   {
-    title: "Karura Ward Community Baraza",
-    date: "Coming Soon",
+    title: "National ID Registration Drive",
+    date: "Today - July 30, 2026",
     location: "Karura Ward",
     description:
-      "A community engagement forum to discuss the vision and priorities for Karura Ward. All residents are welcome.",
-  },
-  {
-    title: "Youth Empowerment Forum",
-    date: "Coming Soon",
-    location: "TBD",
-    description:
-      "A forum focused on youth skills development, entrepreneurship, and employment opportunities.",
-  },
-  {
-    title: "Environmental Clean-Up Drive",
-    date: "Coming Soon",
-    location: "Karura Ward",
-    description:
-      "Join us for a community clean-up and tree-planting exercise. Let's keep Karura clean and green.",
+      "Austine Omondi is on the ground coordinating the National ID registration exercise. All residents who have not yet registered for their national ID are encouraged to come out and register.",
+    images: ID_IMAGES,
   },
 ];
 
@@ -57,6 +51,20 @@ export default function Events() {
                     <h3 className={styles.cardTitle}>{event.title}</h3>
                     <p className={styles.cardLocation}>{event.location}</p>
                     <p className={styles.cardDesc}>{event.description}</p>
+                    {event.images && (
+                      <div className={styles.eventImages}>
+                        {event.images.map((src, j) => (
+                          <Image
+                            key={j}
+                            src={src}
+                            alt="ID registration drive"
+                            width={400}
+                            height={300}
+                            className={styles.eventImg}
+                          />
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}

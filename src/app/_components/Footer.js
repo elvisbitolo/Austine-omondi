@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaTiktok, FaFacebook, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { SITE, SOCIAL, NAV_LINKS } from "../_lib/constants";
 import styles from "./Footer.module.css";
 
@@ -60,32 +61,36 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialLink}
+                aria-label="TikTok"
               >
-                TikTok
+                <FaTiktok />
               </a>
               <a
                 href={SOCIAL.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialLink}
+                aria-label="Facebook"
               >
-                Facebook
+                <FaFacebook />
               </a>
               <a
                 href={SOCIAL.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialLink}
+                aria-label="LinkedIn"
               >
-                LinkedIn
+                <FaLinkedin />
               </a>
               <a
                 href={SOCIAL.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialLink}
+                aria-label="WhatsApp"
               >
-                WhatsApp Group
+                <FaWhatsapp />
               </a>
             </div>
           </div>

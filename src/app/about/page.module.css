@@ -107,6 +107,67 @@
   color: var(--color-text-light);
 }
 
+.cbo {
+  background: var(--color-bg);
+}
+
+.cboCard {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.cboContent {
+  flex: 1;
+}
+
+.cboName {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.cboDesc {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.cboStats {
+  display: flex;
+  gap: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.cboStat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.cboStatNum {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+}
+
+.cboStatLabel {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 .achievements {
   background: var(--color-bg-alt);
 }
@@ -151,6 +212,17 @@
 
   .photoBox {
     max-width: 260px;
+  }
+
+  .cboCard {
+    flex-direction: column;
+    padding: 28px 20px;
+    gap: 28px;
+  }
+
+  .cboStats {
+    width: 100%;
+    justify-content: center;
   }
 
   .achievementsGrid {

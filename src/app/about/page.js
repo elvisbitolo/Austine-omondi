@@ -86,6 +86,51 @@ export default function About() {
       </AnimateOnScroll>
 
       <AnimateOnScroll>
+        <section className={`section ${styles.cbo}`}>
+          <div className="container">
+            <h2 className="section-title">Community Leadership</h2>
+            <p className="section-subtitle">
+              Founder &amp; Chairperson of Brilliant Angels CBO — transforming lives in Githogoro.
+            </p>
+            <div className={styles.cboCard}>
+              <div className={styles.cboContent}>
+                <h3 className={styles.cboName}>Brilliant Angels Community Based Organisation</h3>
+                <p className={styles.cboDesc}>
+                  Founded in 2018 and registered in 2024, Brilliant Angels CBO is dedicated to
+                  uplifting the Githogoro community through education, environmental conservation,
+                  sports &amp; arts, youth &amp; women empowerment, health &amp; wellness, and disaster management.
+                  Under Austine&apos;s leadership, the organisation runs a community school, the Sulwe
+                  Mentorship &amp; Scholarship programme, and the Adopt a Child initiative.
+                </p>
+                <a
+                  href="https://brilliant-angel-cbo.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Visit Brilliant Angels Website
+                </a>
+              </div>
+              <div className={styles.cboStats}>
+                <div className={styles.cboStat}>
+                  <span className={styles.cboStatNum}>2018</span>
+                  <span className={styles.cboStatLabel}>Founded</span>
+                </div>
+                <div className={styles.cboStat}>
+                  <span className={styles.cboStatNum}>6</span>
+                  <span className={styles.cboStatLabel}>Core Programs</span>
+                </div>
+                <div className={styles.cboStat}>
+                  <span className={styles.cboStatNum}>2</span>
+                  <span className={styles.cboStatLabel}>Scholars Yearly</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </AnimateOnScroll>
+
+      <AnimateOnScroll>
         <section className={`section ${styles.achievements}`}>
           <div className="container">
             <h2 className="section-title">Achievements &amp; Roles</h2>

@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 export const metadata = {
   title: "Manifesto | Austine Omondi for MCA Karura Ward 2027",
   description:
-    "Read Austine Omondi's manifesto and vision for Karura Ward — education, youth empowerment, environment, healthcare, and infrastructure.",
+    "Read Austine Omondi's manifesto and vision for Karura Ward — education, infrastructure, job creation, sports, security, and more.",
 };
 
 const PILLARS = [
@@ -13,10 +13,12 @@ const PILLARS = [
     title: "Education & Youth Empowerment",
     icon: "🎓",
     points: [
-      "Establish scholarship programs for needy students in Karura Ward",
-      "Support early childhood development centers with learning materials",
-      "Create youth mentorship and skills development programs",
-      "Partner with educational institutions for talent development",
+      "Lobby for a secondary school to be constructed in Cheleta",
+      "Push for new and modern classrooms across Karura Ward",
+      "Build empowerment centers in Karura Ward for youth and community",
+      "Ensure equitable bursary distribution for all needy students",
+      "Start a Karura Education Foundation to mobilize resources for students",
+      "Lobby for a modest ECDE center to be built in Karura Ward",
     ],
   },
   {
@@ -43,20 +45,22 @@ const PILLARS = [
     title: "Infrastructure & Development",
     icon: "🏗️",
     points: [
-      "Push for road improvements and street lighting",
-      "Support market infrastructure for small businesses",
+      "Install street lights across Karura Ward for security and visibility",
+      "Maintain a proper drainage system to prevent flooding",
+      "Ensure regular road maintenance and improvements",
       "Advocate for reliable water and electricity supply",
       "Promote affordable housing initiatives",
     ],
   },
   {
-    title: "Youth & Women Empowerment",
+    title: "Youth Empowerment & Job Creation",
     icon: "👥",
     points: [
-      "Create job and entrepreneurship opportunities for youth",
+      "Create job opportunities for youth in corporate sectors in Karura Ward",
+      "Support local businesses and SMEs in the area",
+      "Organize boda boda operators into structured Saccos for better earnings",
       "Support women-led businesses and cooperatives",
       "Establish platforms for youth participation in governance",
-      "Champion gender equality and inclusion",
     ],
   },
   {
@@ -67,6 +71,25 @@ const PILLARS = [
       "Ensure transparent use of ward development funds",
       "Publish regular reports on projects and expenditures",
       "Be accessible and accountable to every resident",
+    ],
+  },
+  {
+    title: "Sports & Talent Development",
+    icon: "⚽",
+    points: [
+      "Support local talents in sports and creative arts",
+      "Lobby for a modern studio to be built in Karura Ward",
+      "Support local football clubs and other sports in the area",
+    ],
+  },
+  {
+    title: "Security & Community Safety",
+    icon: "🛡️",
+    points: [
+      "Install street lights in dark spots to improve security at night",
+      "Work with local administration to strengthen community policing",
+      "Establish neighborhood watch programs across the ward",
+      "Support Nyumba Kumi initiative for better community security",
     ],
   },
 ];
@@ -87,7 +110,7 @@ export default function Manifesto() {
               integrity, serve with humility, and deliver with excellence.
             </p>
             <p>
-              My manifesto is built on six core pillars that reflect the
+              My manifesto is built on these core pillars that reflect the
               aspirations and needs of our community. Together, we will build a
               Karura Ward that works for everyone.
             </p>

@@ -1,3 +1,4 @@
+import { FaTiktok, FaFacebook, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { SITE, SOCIAL } from "../_lib/constants";
 import ContactForm from "./ContactForm";
 import styles from "./page.module.css";
@@ -52,32 +53,36 @@ export default function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.socialLink}
+                    aria-label="TikTok"
                   >
-                    TikTok
+                    <FaTiktok />
                   </a>
                   <a
                     href={SOCIAL.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.socialLink}
+                    aria-label="Facebook"
                   >
-                    Facebook
+                    <FaFacebook />
                   </a>
                   <a
                     href={SOCIAL.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.socialLink}
+                    aria-label="LinkedIn"
                   >
-                    LinkedIn
+                    <FaLinkedin />
                   </a>
                   <a
                     href={SOCIAL.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.socialLink}
+                    aria-label="WhatsApp"
                   >
-                    WhatsApp Group
+                    <FaWhatsapp />
                   </a>
                 </div>
               </div>
