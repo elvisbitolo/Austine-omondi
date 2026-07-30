@@ -71,6 +71,14 @@ export default function Contact() {
                   >
                     LinkedIn
                   </a>
+                  <a
+                    href={SOCIAL.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.socialLink}
+                  >
+                    WhatsApp Group
+                  </a>
                 </div>
               </div>
 

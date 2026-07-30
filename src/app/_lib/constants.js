@@ -16,6 +16,7 @@ export const SOCIAL = {
   tiktok: "https://www.tiktok.com/@austineomondi254",
   facebook: "https://www.facebook.com/austine.omondinyakwarngiela",
   linkedin: "https://www.linkedin.com/in/austine-omondi-0b7142261",
+  whatsapp: "https://chat.whatsapp.com/IbH2YWfTDXqEdjQjIr5JMW",
 };
 
 export const EDUCATION = [
