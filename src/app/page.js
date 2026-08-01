@@ -5,6 +5,10 @@ import AnimateOnScroll from "./_components/AnimateOnScroll";
 import { SITE, ACHIEVEMENTS } from "./_lib/constants";
 import styles from "./page.module.css";
 
+export const metadata = {
+  alternates: { canonical: "/" },
+};
+
 export default function Home() {
   return (
     <>

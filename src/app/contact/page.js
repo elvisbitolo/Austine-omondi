@@ -7,6 +7,7 @@ export const metadata = {
   title: "Contact | Austine Omondi for MCA Karura Ward 2027",
   description:
     "Get in touch with Austine Omondi's campaign. Volunteer, ask questions, or share your ideas for Karura Ward.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function Contact() {

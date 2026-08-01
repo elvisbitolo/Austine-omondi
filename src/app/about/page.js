@@ -7,6 +7,7 @@ export const metadata = {
   title: "About Austine Omondi | MCA Aspirant Karura Ward 2027",
   description:
     "Learn about Austine Omondi — his background, education, achievements, and vision for Karura Ward.",
+  alternates: { canonical: "/about" },
 };
 
 export default function About() {

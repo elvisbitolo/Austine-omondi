@@ -6,6 +6,7 @@ export const metadata = {
   title: "Manifesto | Austine Omondi for MCA Karura Ward 2027",
   description:
     "Read Austine Omondi's manifesto and vision for Karura Ward — education, infrastructure, job creation, sports, security, and more.",
+  alternates: { canonical: "/manifesto" },
 };
 
 const PILLARS = [

@@ -6,6 +6,7 @@ export const metadata = {
   title: "Events | Austine Omondi Campaign",
   description:
     "Upcoming campaign events, rallies, and community meetings for Austine Omondi's MCA campaign in Karura Ward.",
+  alternates: { canonical: "/events" },
 };
 
 const ID_IMAGES = [

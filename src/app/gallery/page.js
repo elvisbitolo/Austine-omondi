@@ -7,6 +7,7 @@ export const metadata = {
   title: "Gallery | Austine Omondi Campaign",
   description:
     "Photos from Austine Omondi's campaign trail in Karura Ward.",
+  alternates: { canonical: "/gallery" },
 };
 
 function getGalleryImages() {
