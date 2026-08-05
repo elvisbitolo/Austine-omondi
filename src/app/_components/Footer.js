@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FaTiktok, FaFacebook, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { SITE, SOCIAL, NAV_LINKS } from "../_lib/constants";
 import styles from "./Footer.module.css";
@@ -98,6 +99,16 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <p>&copy; {year} {SITE.name}. All rights reserved.</p>
+          <p className={styles.harambee}>
+            <Image
+              src="/kenya-flag.png"
+              alt="Kenya flag"
+              width={36}
+              height={24}
+              className={styles.flag}
+            />
+            Harambee
+          </p>
           <p>Paid for by the Austine Omondi Campaign</p>
         </div>
       </div>

@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { SITE } from "../_lib/constants";
 import styles from "./Countdown.module.css";
 
 export default function Countdown() {
-  const target = new Date("2027-08-09T00:00:00+03:00");
+  const target = new Date(`${SITE.year}-08-09T00:00:00+03:00`);
 
   const calc = () => {
     const now = new Date();

@@ -97,6 +97,20 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
+.harambee {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.flag {
+  border-radius: 3px;
+}
+
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr 1fr;

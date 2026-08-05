@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaWhatsapp, FaMobileAlt, FaUniversity } from "react-icons/fa";
 import Countdown from "./_components/Countdown";
 import AnimateOnScroll from "./_components/AnimateOnScroll";
-import { SITE, ACHIEVEMENTS } from "./_lib/constants";
+import CopyField from "./_components/CopyField";
+import { SITE, SOCIAL, ACHIEVEMENTS, DONATE } from "./_lib/constants";
+import { VOTER_DATA } from "./_lib/voterData";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -128,6 +131,77 @@ export default function Home() {
       </AnimateOnScroll>
 
       <AnimateOnScroll>
+        <section className={`section ${styles.voters}`}>
+          <div className="container">
+            <h2 className="section-title">Voter Data</h2>
+            <p className="section-subtitle">
+              {VOTER_DATA.ward} · {VOTER_DATA.constituency} · {VOTER_DATA.county}
+            </p>
+            <div className={styles.votersGrid}>
+              <div className={styles.votersCard}>
+                <span className={styles.votersNum}>
+                  {VOTER_DATA.registered.toLocaleString("en-KE")}
+                </span>
+                <span className={styles.votersLabel}>Registered Voters</span>
+              </div>
+              <div className={styles.votersCard}>
+                <span className={styles.votersNum}>{VOTER_DATA.stations}</span>
+                <span className={styles.votersLabel}>Polling Stations</span>
+              </div>
+              <div className={styles.votersCard}>
+                <span className={styles.votersNum}>{VOTER_DATA.centersCount}</span>
+                <span className={styles.votersLabel}>Polling Centres</span>
+              </div>
+            </div>
+            <div className={styles.votersAction}>
+              <Link href="/voters" className="btn btn-primary">
+                View Stations Breakdown
+              </Link>
+            </div>
+          </div>
+        </section>
+      </AnimateOnScroll>
+
+      <AnimateOnScroll>
+        <section className={`section ${styles.support}`}>
+          <div className="container">
+            <h2 className="section-title">Support the Movement</h2>
+            <p className="section-subtitle">
+              Building a better Karura Ward is a collective responsibility. Every
+              contribution, big or small, brings us one step closer to the
+              community we all desire.
+            </p>
+            <div className={styles.supportGrid}>
+              <div className={styles.supportCard}>
+                <div className={styles.supportHeader}>
+                  <div className={styles.supportIcon}>
+                    <FaMobileAlt />
+                  </div>
+                  <h3 className={styles.supportTitle}>M-Pesa</h3>
+                </div>
+                <CopyField label="M-Pesa Number" value={DONATE.mpesa} />
+              </div>
+              <div className={styles.supportCard}>
+                <div className={styles.supportHeader}>
+                  <div className={styles.supportIcon}>
+                    <FaUniversity />
+                  </div>
+                  <h3 className={styles.supportTitle}>Bank Transfer</h3>
+                </div>
+                <CopyField label="Paybill" value={DONATE.bank.paybill} />
+                <CopyField label="Account" value={DONATE.bank.account} />
+              </div>
+            </div>
+            <div className={styles.supportAction}>
+              <Link href="/support" className="btn btn-primary">
+                See All Ways to Support
+              </Link>
+            </div>
+          </div>
+        </section>
+      </AnimateOnScroll>
+
+      <AnimateOnScroll>
         <section className={`section ${styles.cta}`}>
           <div className="container">
             <h2 className={styles.ctaTitle}>Together We Can Build a Better Karura</h2>
@@ -142,6 +216,14 @@ export default function Home() {
               <Link href="/events" className="btn btn-outline">
                 Upcoming Events
               </Link>
+              <a
+                href={SOCIAL.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.ctaWhatsapp}
+              >
+                <FaWhatsapp /> Join WhatsApp Group
+              </a>
             </div>
           </div>
         </section>

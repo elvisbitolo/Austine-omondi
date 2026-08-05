@@ -1,6 +1,7 @@
 import { FaTiktok, FaFacebook, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { SITE, SOCIAL } from "../_lib/constants";
 import ContactForm from "./ContactForm";
+import WhatsAppGroupCTA from "../_components/WhatsAppGroupCTA";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -91,7 +92,7 @@ export default function Contact() {
               <div className={styles.infoItem}>
                 <h3 className={styles.infoLabel}>Location</h3>
                 <p className={styles.infoValue}>
-                  Karura Ward, {SITE.homeCounty}
+                  Karura Ward, Nairobi
                 </p>
               </div>
             </div>
@@ -106,6 +107,8 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+      <WhatsAppGroupCTA />
     </>
   );
 }

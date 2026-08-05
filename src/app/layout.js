@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Nav from "./_components/Nav";
 import Footer from "./_components/Footer";
 import WhatsAppButton from "./_components/WhatsAppButton";
+import Chatbot from "./_components/Chatbot";
 import { SITE, SOCIAL } from "./_lib/constants";
 import "./globals.css";
 
@@ -92,6 +93,7 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
         <WhatsAppButton />
+        <Chatbot />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

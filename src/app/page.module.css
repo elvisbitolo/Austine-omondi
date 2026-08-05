@@ -178,6 +178,105 @@
   line-height: 1.5;
 }
 
+.voters {
+  background: var(--color-bg);
+}
+
+.votersGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.votersCard {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 28px 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.votersCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-secondary);
+}
+
+.votersNum {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+}
+
+.votersLabel {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.votersAction {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.support {
+  background: var(--color-bg-alt);
+}
+
+.supportGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.supportCard {
+  background: var(--color-white);
+  padding: 28px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.supportHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.supportIcon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--color-white);
+  background: var(--color-primary);
+  border-radius: var(--radius-sm);
+}
+
+.supportTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.supportAction {
+  text-align: center;
+  margin-top: 40px;
+}
+
 .cta {
   background: var(--color-primary);
   text-align: center;
@@ -205,6 +304,26 @@
   flex-wrap: wrap;
 }
 
+.ctaWhatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: #25d366;
+  color: var(--color-white);
+  border: 2px solid #25d366;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.ctaWhatsapp:hover {
+  background: #1ebe5b;
+  border-color: #1ebe5b;
+  transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
   .heroTitle {
     font-size: 2.2rem;
@@ -222,8 +341,16 @@
     grid-template-columns: 1fr;
   }
 
+  .supportGrid {
+    grid-template-columns: 1fr;
+  }
+
   .achievementsGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .votersGrid {
+    grid-template-columns: 1fr;
   }
 
   .ctaTitle {

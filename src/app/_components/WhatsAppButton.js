@@ -1,13 +1,17 @@
 "use client";
 
+import { SITE } from "../_lib/constants";
 import styles from "./WhatsAppButton.module.css";
 
 export default function WhatsAppButton() {
-  const phone = "254796595995";
+  const phone = `254${SITE.phone[0].slice(1)}`;
+  const text = encodeURIComponent(
+    "Hello Austine! I just visited your campaign website and I'd like to connect with you."
+  );
 
   return (
     <a
-      href={`https://wa.me/${phone}`}
+      href={`https://wa.me/${phone}?text=${text}`}
       target="_blank"
       rel="noopener noreferrer"
       className={styles.whatsapp}

@@ -1,35 +1,66 @@
 "use client";
 
 import { useState } from "react";
+import { SITE } from "../_lib/constants";
 import styles from "./ContactForm.module.css";
 
+const WHATSAPP_NUMBER = `254${SITE.phone[0].slice(1)}`;
+const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+
 export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState("idle");
+
+  function buildMessage(data) {
+    const name = data.get("name") || "";
+    const email = data.get("email") || "";
+    const phone = data.get("phone") || "";
+    const message = data.get("message") || "";
+    return [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Phone: ${phone}`,
+      "",
+      message,
+    ].join("\n");
+  }
 
   async function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
     const data = new FormData(form);
+    setStatus("sending");
 
-    try {
-      const res = await fetch("https://formspree.io/f/your-form-id", {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
-      });
-      if (res.ok) setSubmitted(true);
-    } catch {
-      // fallback: just show success anyway for now
-      setSubmitted(true);
+    if (FORMSPREE_ID) {
+      try {
+        const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+          method: "POST",
+          body: data,
+          headers: { Accept: "application/json" },
+        });
+        if (res.ok) {
+          setStatus("sent");
+          return;
+        }
+      } catch {
+        // fall through to WhatsApp delivery
+      }
     }
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+      buildMessage(data)
+    )}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+    setStatus("sent");
   }
 
-  if (submitted) {
+  if (status === "sent") {
     return (
       <div className={styles.success}>
         <p className={styles.successTitle}>Thank You!</p>
         <p className={styles.successDesc}>
-          Your message has been received. We&apos;ll get back to you soon.
+          {FORMSPREE_ID
+            ? "Your message has been received. We'll get back to you soon."
+            : "WhatsApp has opened with your message — press Send to deliver it. Karibu!"}
         </p>
       </div>
     );
@@ -92,8 +123,8 @@ export default function ContactForm() {
         />
       </div>
 
-      <button type="submit" className={styles.submit}>
-        Send Message
+      <button type="submit" className={styles.submit} disabled={status === "sending"}>
+        {status === "sending" ? "Sending..." : "Send Message"}
       </button>
     </form>
   );
