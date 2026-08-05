@@ -49,10 +49,10 @@ export default function About() {
               <div className={styles.photoPlaceholder}>
                 <div className={styles.photoBox}>
                   <Image
-                    src="/logo.jpg"
-                    alt={SITE.fullName}
-                    width={200}
-                    height={200}
+                    src="/gallery/austin with babu owino.jpg"
+                    alt={`${SITE.fullName} with Hon. Babu Owino`}
+                    width={1200}
+                    height={1600}
                     className={styles.photo}
                   />
                 </div>

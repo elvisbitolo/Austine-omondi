@@ -17,24 +17,44 @@ const jsonLd = {
       url: BASE_URL,
       name: SITE.name,
       description:
-        "Official campaign website of Austine Omondi — MCA aspirant for Karura Ward 2027.",
+        "Official campaign website of Austine Omondi — MCA aspirant for Karura Ward, Westlands Constituency, Nairobi, 2027.",
       inLanguage: "en",
     },
     {
       "@type": "Person",
       "@id": `${BASE_URL}/#person`,
       name: SITE.fullName,
+      alternateName: SITE.name,
       url: BASE_URL,
-      image: `${BASE_URL}/logo.jpg`,
+      image: `${BASE_URL}/og-image.jpg`,
       telephone: SITE.phone.map((p) => `+254${p.slice(1)}`),
       email: SITE.email,
       jobTitle: `MCA Aspirant, ${SITE.aspiringWard} ${SITE.year}`,
       description:
         "Educator, youth leader, environmentalist, and philanthropist running for MCA of Karura Ward in the 2027 Kenyan General Elections.",
-      sameAs: [SOCIAL.tiktok, SOCIAL.facebook, SOCIAL.linkedin],
-      affiliatedTo: {
-        "@id": `${BASE_URL}/#website`,
+      nationality: { "@type": "Country", name: "Kenya" },
+      birthPlace: {
+        "@type": "Place",
+        name: `Kojwach Ward, Kabondo Kasipul, Homabay County`,
       },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: SITE.aspiringWard,
+        addressRegion: "Nairobi County",
+        addressCountry: "KE",
+      },
+      knowsAbout: [
+        "Education",
+        "Youth empowerment",
+        "Environmental conservation",
+        "Community development",
+        "Conflict resolution",
+      ],
+      worksFor: {
+        "@type": "NGO",
+        name: "Brilliant Angels Community Based Organization",
+      },
+      sameAs: [SOCIAL.tiktok, SOCIAL.facebook, SOCIAL.linkedin],
     },
   ],
 };
@@ -51,16 +71,30 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL(BASE_URL),
-  title: "Austine Omondi | MCA Aspirant Karura Ward 2027",
+  title: {
+    default: "Austine Omondi | MCA Aspirant Karura Ward 2027",
+    template: "%s",
+  },
   description:
-    "Official campaign website of Austine Omondi — MCA aspirant for Karura Ward 2027. Educator, youth leader, environmentalist, and philanthropist committed to transformative leadership.",
+    "Austine Omondi — MCA aspirant for Karura Ward, Westlands Constituency, Nairobi, in the 2027 Kenyan General Elections. Educator, youth leader, environmentalist, and philanthropist committed to transformative leadership.",
   verification: {
     google: "EO1A_95MmyPuFD2ULeSrZ2xzliMUJEdAWtRmclDUwPo",
   },
+  keywords: [
+    "Austine Omondi",
+    "MCA Karura Ward",
+    "Karura Ward MCA 2027",
+    "Westlands Constituency",
+    "Member of County Assembly Karura",
+    "Nairobi County Assembly",
+    "MCA aspirant 2027 Kenya",
+    "Karura MCA candidate",
+    "Brilliant Angels CBO Githogoro",
+  ],
   openGraph: {
     title: "Austine Omondi | MCA Aspirant Karura Ward 2027",
     description:
-      "Official campaign website of Austine Omondi — MCA aspirant for Karura Ward 2027. Educator, youth leader, environmentalist, and philanthropist.",
+      "Austine Omondi — MCA aspirant for Karura Ward, Westlands Constituency, Nairobi, in the 2027 Kenyan General Elections. Educator, youth leader, environmentalist, and philanthropist.",
     type: "website",
     url: BASE_URL,
     siteName: "Austine Omondi",
@@ -78,7 +112,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Austine Omondi | MCA Aspirant Karura Ward 2027",
     description:
-      "Official campaign website of Austine Omondi — MCA aspirant for Karura Ward 2027.",
+      "Austine Omondi — MCA aspirant for Karura Ward, Westlands Constituency, Nairobi, in the 2027 Kenyan General Elections.",
     images: ["/og-image.jpg"],
   },
 };
