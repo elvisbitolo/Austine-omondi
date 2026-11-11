@@ -71,6 +71,10 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL(BASE_URL),
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
   title: {
     default: "Austine Omondi | MCA Aspirant Karura Ward 2027",
     template: "%s",
